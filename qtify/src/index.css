@@ -1,12 +1,40 @@
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* css for all */
 
-  background-color: #121212;
+:root {
+  --color-primary: #34c94b;
+  --color-white: #ffffff;
+  --color-black: #121212;
 }
 
-code {
-  font-family: "Poppins", sans-serif;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,body {
+  height: 100%;
+}
+
+
+body {
+  background-color: var(--color-black);   
+  color: var(--color-white);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+img,svg{
+  display: block;
+  max-width: 100%;
+}
+
+
+.swiper-slide{
+  width: auto !important;
 }
