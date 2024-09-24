@@ -3,28 +3,37 @@ import { Card, CardMedia, CardContent, Typography, Chip, Box } from '@mui/materi
 
 const AlbumCard = ({ album }) => {
   return (
-    <Card sx={{ width: 200, m: 2, boxShadow: 3 }}>
+    <Card sx={{
+      flexGrow: 1, // Allow the card to grow and take available space
+      minWidth: 200, // Set a reasonable minimum width
+      maxWidth: 200, // Set a maximum width to maintain visual balance
+      m: 2,
+      borderRadius: '15px',
+      overflow: 'hidden',
+      backgroundColor: '#1e1e1e',
+      color: '#fff',
+      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+      display: 'flex',
+      flexDirection: 'column',
+    }}>
       {/* Album Image */}
       <CardMedia
         component="img"
         image={album.image}
         alt={album.title}
-        sx={{ height: 200, objectFit: 'cover' }}
+        sx={{ height: 200, objectFit: 'cover' }} 
       />
       
       {/* Album Info */}
-      <CardContent sx={{ textAlign: 'center', p: 2 }}>
+      <CardContent sx={{ textAlign: 'center', paddingBottom: '8px' }}>
         {/* Follows Chip */}
-        <Box display="flex" justifyContent="center">
-          <Chip label={`${album.follows} Follows`} size="small" color="primary" />
+        <Box display="flex" justifyContent="center" mt={1}>
+          <Chip label={`${album.follows} Follows`} size="small" sx={{ backgroundColor: '#000', color: '#fff' }} />
         </Box>
         
         {/* Album Title */}
-        <Typography variant="h6" mt={1}>
+        <Typography variant="body1" mt={1}>
           {album.title}
-        </Typography>
-        <Typography variant="body2" color="textSecondary">
-          {album.description}
         </Typography>
       </CardContent>
     </Card>

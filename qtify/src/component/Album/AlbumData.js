@@ -23,18 +23,18 @@ const AlbumData = () => {
   };
 
   return (
-    <Box my={4}>
+    <Box my={4} px={4} >
       {/* Section Header */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Typography variant="h4">Top Albums</Typography>
-        <Button onClick={handleCollapse}>
+        <Typography variant="h5" sx={{color:"white"}}>Top Albums</Typography>
+        <Button onClick={handleCollapse} sx={{color:"#34C94B"}}>
           {isCollapsed ? 'Show All' : 'Collapse'}
         </Button>
       </Box>
 
       {/* Album Grid */}
       <Grid container spacing={2} mt={2}>
-        {albums.slice(0, isCollapsed ? 4 : albums.length).map((album) => (
+        {albums.slice(0, isCollapsed ? 7 : albums.length).map((album) => (
           <Grid item key={album.id} xs={12} sm={6} md={4} lg={3}>
             <AlbumCard album={album} />
           </Grid>
