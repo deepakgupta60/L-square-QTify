@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
 // import BasicButton from "../Button/BasicButton";
-// import Search from "../Search/Search";
+import Search from "../Search/Search";
 import styles from "./Navbar.module.css";
 
 
@@ -13,10 +13,10 @@ function Navbar({searchData}) {
       <Link to="/">
         <Logo />
       </Link>
-      {/* <Search
+      <Search
         placeholder="Search a song of your choice"
-        searchData={searchData}
-      /> */}
+        // searchData={searchData}
+      />
       <BasicButton>Give Feedback</BasicButton>
     </nav>
   );
