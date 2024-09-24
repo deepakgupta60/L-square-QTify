@@ -49,7 +49,7 @@ const Autocomplete = React.forwardRef(function Autocomplete(props, ref) {
         <StyledInput
           id={id}
 
-          placeholder='search'
+          placeholder='Search a album of your choice'
           disabled={disabled}
           readOnly={readOnly}
           {...getInputProps()}
