@@ -48,6 +48,8 @@ const Autocomplete = React.forwardRef(function Autocomplete(props, ref) {
       >
         <StyledInput
           id={id}
+
+          placeholder='search'
           disabled={disabled}
           readOnly={readOnly}
           {...getInputProps()}
@@ -66,6 +68,8 @@ const Autocomplete = React.forwardRef(function Autocomplete(props, ref) {
       </StyledAutocompleteRoot>
       {anchorEl ? (
         <Popper
+
+      
           open={popupOpen}
           anchorEl={anchorEl}
           slots={{
